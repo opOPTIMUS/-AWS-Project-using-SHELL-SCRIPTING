@@ -1,0 +1,33 @@
+#!/bin/bash
+
+###############################
+# Author: OPTIMUS
+# Date: 21th-june-2024
+#
+# Version: v1
+#
+# This script will report the AWS resource usage
+# #############################
+#
+# AWS S3
+# AWS EC2
+# AWS Lambda
+# AWS IAM Users
+
+set -x
+
+# list S3 buckets
+echo "LIST OF S3 BUCKETS"
+aws s3 ls
+
+# list EC2 Instances
+echo "LIST OF EC2 INSTANCES"
+aws ec2 describe-instances
+
+# list lambda
+echo "LIST OF LAMBDA"
+aws lambda list-functions
+
+# list IAM Users
+echo "LIST OF IAM USERS"
+aws iam list-users

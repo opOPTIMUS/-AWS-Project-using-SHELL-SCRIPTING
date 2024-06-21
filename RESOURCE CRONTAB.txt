@@ -1,0 +1,55 @@
+ubuntu@ip-172-31-38-112:~$ vim aws_resource_tracker.sh 
+ubuntu@ip-172-31-38-112:~$ ./aws_resource_tracker.sh 
++ echo 'LIST OF S3 BUCKETS'
+LIST OF S3 BUCKETS
++ aws s3 ls
++ echo 'LIST OF EC2 INSTANCES'
+LIST OF EC2 INSTANCES
++ aws ec2 describe-instances
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-0705384c0b33c194c",
+                    "InstanceId": "i-061d017cdadd9b15a",
+                    "InstanceType": "t3.micro",
+                    "KeyName": "shellscript",
+                    "LaunchTime": "2024-06-21T14:09:44+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "eu-north-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-31-30-173.eu-north-1.compute.internal",
+                    "PrivateIpAddress": "172.31.30.173",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
++ echo 'LIST OF LAMBDA'
+LIST OF LAMBDA
++ aws lambda list-functions
+{
+    "Functions": []
+}
++ echo 'LIST OF IAM USERS'
+LIST OF IAM USERS
++ aws iam list-users
+{
+    "Users": []
+}
+ubuntu@ip-172-31-38-112:~$   
